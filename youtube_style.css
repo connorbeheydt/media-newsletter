@@ -1,0 +1,32 @@
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid grey;
+}
+
+table tr td:nth-child(1) {
+    width: 60%;
+}
+
+table tr td:nth-child(2) {
+    width: 40%;
+    color: grey;
+    text-align: center;
+}
+
+tr,
+td {
+    padding: 10px;
+    border: 2px solid grey;
+}
+
+tbody td { text-align: center; } 
+
+body {
+    color: white; 
+    background-color: black;
+}
+
+h2,h3   {color: white;}
+
