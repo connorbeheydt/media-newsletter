@@ -13,9 +13,7 @@ def main():
     reddit_getter: RedditGetter = RedditGetter()
     youtube_getter: YoutubeGetter = YoutubeGetter(credential_manager)
     
-    print("\n\nPROGRAM START\n\n")
-
-
+    print("\n\nWelcome to Media Newsletter!\n\n")
     reddit_feeds: Dict[str, List[str]]
     youtube_feeds: Dict[str, List[str]]
     with open('reddit_feeds.json', 'r') as f:
@@ -35,7 +33,7 @@ def main():
     print("Sending Youtube Digest...")
     email_handler.send_message(youtube_content, email, subject='Media Newsletter: Youtube Digest')
 
-    print("\n\nPROGRAM END\n\n")
+    print("\n\nEnjoy your media!\n\n")
 
 def write_html(title: str, html_content: str):
     with open(title, 'w') as f:
