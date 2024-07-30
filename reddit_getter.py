@@ -46,7 +46,7 @@ class RedditGetter():
         for name in subreddit_names:
             print(f"\tGetting {name} content...")
             subreddit: Subreddit = self.reddit.subreddit(name)
-            subreddit_contents.append(self.get_subreddit_content(subreddit))
+            subreddit_contents.append(self.get_subreddit_content(subreddit, time_filter="day"))
         feed_text: str = f"<h2>{feed_name}</h2>\n{"\n".join(subreddit_contents)}"
         return feed_text
 

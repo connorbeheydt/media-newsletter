@@ -4,6 +4,7 @@ from typing import List, Dict
 import json
 from youtube_getter import YoutubeGetter
 from google_creds_getter import GoogleCreds
+import sys
 
 def main():
     SCOPES = ["https://www.googleapis.com/auth/gmail.send",
@@ -21,7 +22,7 @@ def main():
     with open('youtube_feeds.json', 'r') as f:
         youtube_feeds = json.load(f)
 
-    email: str = input("Please enter email to send to: ")
+    email: str = sys.argv[1] #input("Please enter email to send to: ")
 
     reddit_content: str = reddit_getter.get_html_content(reddit_feeds)
     write_html("reddit_output.html", reddit_content)
